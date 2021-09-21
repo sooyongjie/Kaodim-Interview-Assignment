@@ -32,7 +32,7 @@ const formQues = document.querySelector("#form-question");
 const formInput = document.querySelector("#form-input");
 const quesNum = document.querySelector("#question-num");
 const element = document.querySelector("#elID");
-const userInput = [];
+const userInput = ['','',''];
 let currQues = 0;
 let requiredInput = false;
 let numOfQues;
@@ -44,13 +44,15 @@ window.onload = () => {
 
 const loadQuestions = (arr) => {
   const { id, question_type, prompt, is_required, min_char_length } = arr;
+  formInput.value = "";
   formQues.textContent = prompt;
   quesNum.textContent = `${currQues + 1}. `;
+  formInput.value = userInput[currQues]
 };
 
 nextBtn.onclick = () => {
   if (!requiredInput && currQues < numOfQues) {
-    
+    userInput[currQues] = formInput.value;
     ++currQues;
     loadQuestions(form.questions[currQues]);
   }
