@@ -1,1 +1,73 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+* {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 40%;
+}
+
+.container {
+  width: 700px;
+  padding: 32px 32px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px solid #aaa;
+  border-radius: 12px;
+}
+
+#form-title {
+  width: max-content;
+}
+
+hr {
+  margin: 28px 0;
+  border: none;
+  border-top: 1px solid #cacaca;
+}
+
+form #form-question {
+  font-weight: 500 !important;
+}
+
+form textarea {
+  resize: none;
+  height: calc(5 * 15px * 1.2);
+  margin: 20px 0;
+  padding: 8px;
+  width: calc(100% - 16px);
+  background: #f2f2f2;
+  display: block;
+  font-size: 15px;
+  border: 1px solid #f2f2f2;
+  border-radius: 6px;
+}
+
+form textarea:focus {
+  outline: none;
+}
+
+form .form-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+form .form-buttons button {
+  padding: 4px 8px;
+  background: #cc1634;
+  color: white;
+  border: 1px solid #cc1634;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form .form-buttons button span {
+  font-size: 14px;
+  font-family: "Roboto Mono", monospace;
+}
+/*# sourceMappingURL=style.css.map */
