@@ -10,7 +10,7 @@ body {
   position: absolute;
   transform: translate(-50%, -50%);
   left: 50%;
-  top: 40%
+  top: 40%;
 }
 
 .container {
@@ -34,9 +34,15 @@ hr {
 }
 
 form {
-  #form-question {
-    font-weight: 500 !important;
+  .form-header {
+      display: flex;
+      align-items: center;
+      column-gap: 10px;
+    #form-question {
+      font-weight: 500 !important;
+    }
   }
+
   textarea {
     resize: none;
     height: calc(5 * 15px * 1.2); //rows * font size * line height
