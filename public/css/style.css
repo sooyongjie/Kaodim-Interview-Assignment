@@ -105,10 +105,7 @@ body#profile nav form {
 body#profile nav button {
   margin-left: -40px;
   padding: 0 12px;
-  background: none;
-  border: none;
   font-size: 16px;
-  cursor: pointer;
 }
 
 body#profile nav input {
@@ -249,8 +246,42 @@ body#profile .about {
 }
 
 body#profile .gallery {
-  height: 140px;
   grid-area: gallery;
+}
+
+body#profile .gallery .image-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+body#profile .gallery .image-container .image {
+  position: relative;
+}
+
+body#profile .gallery .image-container .image img {
+  height: 150px;
+  width: 150px;
+}
+
+body#profile .gallery .image-container .image #view-all {
+  display: flex;
+  flex-direction: column;
+  row-gap: 4px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+body#profile .gallery .image-container .image #view-all span {
+  font-size: 16px;
+}
+
+body#profile .gallery .image-container .image #view-all .img-num {
+  font-size: 20px;
 }
 
 body#profile .ratings {
@@ -271,5 +302,15 @@ body#profile .service-section .recommendations {
 
 body#profile footer {
   height: 200px;
+}
+
+.no-style {
+  background: none;
+  border: none;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */
