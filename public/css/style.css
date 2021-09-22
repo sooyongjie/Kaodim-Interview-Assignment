@@ -4,14 +4,14 @@
   padding: 0;
 }
 
-body {
+body#request {
   position: absolute;
   transform: translate(-50%, -50%);
   left: 50%;
   top: 40%;
 }
 
-.container {
+body#request .container {
   width: 700px;
   padding: 32px 32px;
   display: flex;
@@ -21,27 +21,27 @@ body {
   border-radius: 12px;
 }
 
-#form-title {
+body#request #form-title {
   width: max-content;
 }
 
-hr {
+body#request hr {
   margin: 28px 0;
   border: none;
   border-top: 1px solid #cacaca;
 }
 
-form .form-header {
+body#request form .form-header {
   display: flex;
   align-items: center;
   column-gap: 10px;
 }
 
-form .form-header #form-question {
+body#request form .form-header #form-question {
   font-weight: 500 !important;
 }
 
-form textarea {
+body#request form textarea {
   resize: none;
   height: calc(5 * 15px * 1.5);
   margin: 20px 0;
@@ -55,16 +55,16 @@ form textarea {
   border-radius: 6px;
 }
 
-form textarea:focus {
+body#request form textarea:focus {
   outline: none;
 }
 
-form .form-buttons {
+body#request form .form-buttons {
   display: flex;
   justify-content: space-between;
 }
 
-form .form-buttons button {
+body#request form .form-buttons button {
   padding: 4px 8px;
   background: #cc1634;
   color: white;
@@ -73,7 +73,7 @@ form .form-buttons button {
   cursor: pointer;
 }
 
-form .form-buttons button span {
+body#request form .form-buttons button span {
   font-size: 14px;
   font-family: "Roboto Mono", monospace;
 }
