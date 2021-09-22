@@ -296,6 +296,14 @@ body#profile .service-section {
   grid-area: service;
 }
 
+body#profile .service-section .contact .heading {
+  margin-bottom: 4px;
+}
+
+body#profile .service-section .contact p {
+  margin-bottom: 12px;
+}
+
 body#profile .service-section .recommendations {
   display: flex;
   flex-direction: column;
