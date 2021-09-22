@@ -87,7 +87,6 @@ body#profile {
 body#profile nav {
   height: 75px;
   width: calc(100% - 100px);
-  margin-bottom: 40px;
   padding: 0 50px;
   display: grid;
   grid-template-columns: 20% 60% 20%;
@@ -130,25 +129,122 @@ body#profile nav input:focus {
 }
 
 body#profile .container {
-  width: 800px;
-  display: grid;
-  grid-template-areas: "profile profile" "about service" "gallery service" "ratings service";
-}
-
-body#profile .section {
-  border: 1px solid darkolivegreen;
-  background: greenyellow;
-  min-height: 20px;
-  min-width: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
 }
 
 body#profile .profile {
-  height: 200px;
-  grid-area: profile;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 0px 0px 16px 16px;
+}
+
+body#profile .profile .profile-banner {
+  height: 240px;
+  width: 100%;
+  background-image: url("../img/banner.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body#profile .profile .profile-content {
+  width: 1200px;
+}
+
+body#profile .profile .profile-content img {
+  width: 120px;
+  margin-top: -90px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+body#profile .profile .profile-content .profile-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+body#profile .profile .profile-content .profile-info .company {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+}
+
+body#profile .profile .profile-content .profile-info .company p.company-name {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+body#profile .profile .profile-content .profile-info .company .company-description {
+  display: flex;
+  align-items: center;
+}
+
+body#profile .profile .profile-content .profile-info .company .company-description i.fa-check {
+  margin: 0 4px 0 12px;
+  font-size: 12px;
+}
+
+body#profile .profile .profile-content .profile-info .company .company-description span.verified {
+  font-weight: 500;
+}
+
+body#profile .profile .profile-content .profile-info .company-stats {
+  display: flex;
+  column-gap: 20px;
+  justify-content: right;
+}
+
+body#profile .profile .profile-content .profile-info .company-stats p.stats-num {
+  margin-bottom: 8px;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: right;
+}
+
+body#profile .profile .profile-content .profile-info .company-stats #rating-count {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  column-gap: 4px;
+}
+
+body#profile .profile .profile-content .profile-info .company-stats .fa-star {
+  font-size: 12px;
+}
+
+body#profile .content {
+  width: 1200px;
+  display: grid;
+  column-gap: 40px;
+  row-gap: 40px;
+  grid-template-areas: "about service" "gallery service" "ratings service";
+  grid-template-rows: auto auto auto;
+  grid-template-columns: 60% 40%;
+  align-self: center;
+}
+
+body#profile .content p {
+  line-height: 1.5;
+}
+
+body#profile .section {
+  padding: 24px;
+  border-radius: 16px;
+  border: 1px solid #aaa;
+}
+
+body#profile .section .heading {
+  margin-bottom: 12px;
+  font-weight: 500;
 }
 
 body#profile .about {
-  height: 140px;
   grid-area: about;
 }
 
@@ -163,15 +259,10 @@ body#profile .ratings {
 }
 
 body#profile .service-section {
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
   grid-area: service;
-}
-
-body#profile .service-section .service {
-  height: 180px;
-}
-
-body#profile .service-section .contact {
-  height: 140px;
 }
 
 body#profile .service-section .recommendations {
