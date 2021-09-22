@@ -1,0 +1,59 @@
+body#profile {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  nav {
+    height: 60px;
+  }
+
+  .container {
+    width: 800px;
+    display: grid;
+    grid-template-areas:
+      "profile profile"
+      "about service"
+      "gallery service"
+      "ratings service";
+  }
+
+  .section {
+    border: 1px solid darkolivegreen;
+    background: greenyellow;
+    min-height: 20px;
+    min-width: 20px;
+  }
+
+  .profile {
+    height: 200px;
+    grid-area: profile;
+  }
+  .about {
+    height: 140px;
+    grid-area: about;
+  }
+  .gallery {
+    height: 140px;
+    grid-area: gallery;
+  }
+  .ratings {
+    height: 360px;
+    grid-area: ratings;
+  }
+  .service-section {
+    grid-area: service;
+    .service {
+      height: 180px;
+    }
+    .contact {
+      height: 140px;
+    }
+    .recommendations {
+      height: 140px;
+    }
+  }
+
+  footer {
+      height: 200px;
+  }
+}

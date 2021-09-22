@@ -77,4 +77,67 @@ body#request form .form-buttons button span {
   font-size: 14px;
   font-family: "Roboto Mono", monospace;
 }
+
+body#profile {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+body#profile nav {
+  height: 60px;
+}
+
+body#profile .container {
+  width: 800px;
+  display: grid;
+  grid-template-areas: "profile profile" "about service" "gallery service" "ratings service";
+}
+
+body#profile .section {
+  border: 1px solid darkolivegreen;
+  background: greenyellow;
+  min-height: 20px;
+  min-width: 20px;
+}
+
+body#profile .profile {
+  height: 200px;
+  grid-area: profile;
+}
+
+body#profile .about {
+  height: 140px;
+  grid-area: about;
+}
+
+body#profile .gallery {
+  height: 140px;
+  grid-area: gallery;
+}
+
+body#profile .ratings {
+  height: 360px;
+  grid-area: ratings;
+}
+
+body#profile .service-section {
+  grid-area: service;
+}
+
+body#profile .service-section .service {
+  height: 180px;
+}
+
+body#profile .service-section .contact {
+  height: 140px;
+}
+
+body#profile .service-section .recommendations {
+  height: 140px;
+}
+
+body#profile footer {
+  height: 200px;
+}
 /*# sourceMappingURL=style.css.map */
