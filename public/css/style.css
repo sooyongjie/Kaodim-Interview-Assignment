@@ -414,6 +414,7 @@ body#profile .review-section .reviews {
 }
 
 body#profile .review-section .reviews .more-reviews {
+  margin: 4px 0;
   font-weight: 500;
   font-size: 14px;
 }
