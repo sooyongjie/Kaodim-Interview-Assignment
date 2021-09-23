@@ -83,12 +83,22 @@ body#request form .form-buttons button span {
   body#profile .content {
     width: 1000px !important;
   }
+  body#profile .gallery .image img {
+    width: 120px;
+  }
 }
 
 @media only screen and (max-width: 1199px) {
   body#profile .profile-content,
   body#profile .content {
     width: 800px !important;
+  }
+  body#profile .gallery .image-container {
+    flex-wrap: wrap;
+    row-gap: 28px;
+  }
+  body#profile .gallery .image-container .image img {
+    width: 200px;
   }
 }
 
@@ -185,7 +195,6 @@ body#request form .form-buttons button span {
 .gallery .image-container {
   width: 100%;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
 }
 
@@ -194,7 +203,6 @@ body#request form .form-buttons button span {
 }
 
 .gallery .image-container .image img {
-  height: 150px;
   width: 150px;
 }
 
@@ -308,6 +316,7 @@ body#request form .form-buttons button span {
   display: flex;
   flex-wrap: wrap;
   column-gap: 12px;
+  row-gap: 12px;
 }
 
 .review-section .compliments .compliment {
@@ -464,7 +473,7 @@ body#request form .form-buttons button span {
 }
 
 .service-section .recommendations .related-service img {
-  width: 100px;
+  height: 100px;
 }
 
 .service-section .recommendations .related-service .related-service-info {

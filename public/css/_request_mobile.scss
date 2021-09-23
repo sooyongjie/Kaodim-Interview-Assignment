@@ -6,6 +6,11 @@
     .content {
       width: $content-width !important;
     }
+    .gallery {
+      .image img {
+        width: 120px;
+      }
+    }
   }
 }
 
@@ -16,6 +21,15 @@
     .profile-content,
     .content {
       width: $content-width !important;
+    }
+    .gallery .image-container {
+      flex-wrap: wrap;
+      row-gap: 28px;
+      .image {
+        img {
+          width: 200px;
+        }
+      }
     }
   }
 }
@@ -30,5 +44,3 @@
     }
   }
 }
-
-

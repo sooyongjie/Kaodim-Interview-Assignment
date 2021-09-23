@@ -72,11 +72,13 @@
       }
     }
   }
+
   .compliments {
     margin-bottom: 32px;
     display: flex;
     flex-wrap: wrap;
     column-gap: 12px;
+    row-gap: 12px;
     .compliment {
       display: flex;
       align-items: center;
