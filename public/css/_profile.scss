@@ -5,6 +5,7 @@
 @import "./profile/service";
 
 $content-width: 1200px;
+$card-padding: 24px;
 
 body#profile {
   display: flex;
@@ -69,7 +70,7 @@ body#profile {
       "gallery service"
       "ratings service";
     grid-template-rows: auto auto auto;
-    grid-template-columns: 60% 40%;
+    grid-template-columns: 0.6fr 0.4fr;
     align-self: center;
     p {
       line-height: 1.5;

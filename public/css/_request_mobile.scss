@@ -22,25 +22,112 @@
     .content {
       width: $content-width !important;
     }
+    .content {
+      grid-template-columns: 0.5fr 0.5fr !important;
+    }
     .gallery .image-container {
       flex-wrap: wrap;
       row-gap: 28px;
       .image {
         img {
-          width: 200px;
+          width: 230px !important;
         }
       }
     }
   }
 }
 
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 979px) {
   $content-width: 600px;
 
   body#profile {
     .profile-content,
     .content {
       width: $content-width !important;
+    }
+    .image {
+      // removing image just for demo purposes (
+      &:nth-child(3) {
+        display: none !important;
+      }
+      img {
+        width: 310px !important;
+      }
+    }
+    .related-service {
+      flex-direction: column;
+      img {
+        margin-bottom: 16px;
+        width: auto;
+        height: auto;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  $content-width: 350px;
+  body#profile {
+    .profile-content {
+      row-gap: unset !important;
+      img {
+        margin-top: -70px !important;
+      }
+      a {
+        align-self: center !important;
+      }
+      .company {
+        text-align: center;
+      }
+      .profile-info {
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .company-stats {
+        p {
+          text-align: center;
+        }
+        // justify-content: center !important;
+      }
+    }
+
+    .profile-content,
+    .content {
+      width: $content-width !important;
+
+      column-gap: 40px;
+      row-gap: 40px;
+      grid-template-areas:
+        "about"
+        "gallery"
+        "ratings"
+        "service" !important;
+      grid-template-rows: unset !important;
+      grid-template-columns: unset !important;
+      align-self: center;
+
+      .gallery .image {
+        img {
+          width: 300px !important;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  $content-width: 300px;
+  body#profile {
+    
+    .profile-content,
+    .content {
+      width: $content-width !important;
+
+      .gallery .image {
+        img {
+          width: 250px !important;
+        }
+      }
     }
   }
 }

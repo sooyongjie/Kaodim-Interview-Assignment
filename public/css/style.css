@@ -93,19 +93,83 @@ body#request form .form-buttons button span {
   body#profile .content {
     width: 800px !important;
   }
+  body#profile .content {
+    grid-template-columns: 0.5fr 0.5fr !important;
+  }
   body#profile .gallery .image-container {
     flex-wrap: wrap;
     row-gap: 28px;
   }
   body#profile .gallery .image-container .image img {
-    width: 200px;
+    width: 230px !important;
   }
 }
 
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 979px) {
   body#profile .profile-content,
   body#profile .content {
     width: 600px !important;
+  }
+  body#profile .image:nth-child(3) {
+    display: none !important;
+  }
+  body#profile .image img {
+    width: 310px !important;
+  }
+  body#profile .related-service {
+    flex-direction: column;
+  }
+  body#profile .related-service img {
+    margin-bottom: 16px;
+    width: auto;
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  body#profile .profile-content {
+    row-gap: unset !important;
+  }
+  body#profile .profile-content img {
+    margin-top: -70px !important;
+  }
+  body#profile .profile-content a {
+    align-self: center !important;
+  }
+  body#profile .profile-content .company {
+    text-align: center;
+  }
+  body#profile .profile-content .profile-info {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  body#profile .profile-content .company-stats p {
+    text-align: center;
+  }
+  body#profile .profile-content,
+  body#profile .content {
+    width: 350px !important;
+    column-gap: 40px;
+    row-gap: 40px;
+    grid-template-areas: "about" "gallery" "ratings" "service" !important;
+    grid-template-rows: unset !important;
+    grid-template-columns: unset !important;
+    align-self: center;
+  }
+  body#profile .profile-content .gallery .image img,
+  body#profile .content .gallery .image img {
+    width: 300px !important;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  body#profile .profile-content,
+  body#profile .content {
+    width: 300px !important;
+  }
+  body#profile .profile-content .gallery .image img,
+  body#profile .content .gallery .image img {
+    width: 250px !important;
   }
 }
 
@@ -126,6 +190,11 @@ body#request form .form-buttons button span {
   background-size: cover;
 }
 
+.profile .profile-content {
+  display: flex;
+  flex-direction: column;
+}
+
 .profile .profile-content img {
   width: 120px;
   margin-top: -90px;
@@ -137,6 +206,7 @@ body#request form .form-buttons button span {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  row-gap: 36px;
 }
 
 .profile .profile-content .profile-info .company {
@@ -464,7 +534,7 @@ body#request form .form-buttons button span {
 }
 
 .service-section .recommendations .heading {
-  margin-bottom: 0;
+  margin-bottom: 0 !important;
 }
 
 .service-section .recommendations .related-service {
@@ -482,7 +552,7 @@ body#request form .form-buttons button span {
 }
 
 .service-section .recommendations .related-service .related-service-info h3 {
-  margin-bottom: 4px;
+  margin-bottom: 8px;
   font-weight: 500;
 }
 
@@ -552,7 +622,7 @@ body#profile .content {
   row-gap: 40px;
   grid-template-areas: "about service" "gallery service" "ratings service";
   grid-template-rows: auto auto auto;
-  grid-template-columns: 60% 40%;
+  grid-template-columns: 0.6fr 0.4fr;
   align-self: center;
 }
 
