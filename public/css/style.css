@@ -317,7 +317,6 @@ body#profile .review-section .ratings .ratings-summary {
 }
 
 body#profile .review-section {
-  height: 360px;
   grid-area: ratings;
 }
 
@@ -402,6 +401,56 @@ body#profile .review-section .compliments .compliment .compliment-count {
   font-weight: 500;
   background: #aaa;
   border-radius: 50%;
+}
+
+body#profile .review-section .reviews {
+  display: flex;
+  flex-direction: column;
+}
+
+body#profile .review-section .reviews .more-reviews {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+body#profile .review-section .reviews .review {
+  margin-bottom: 24px;
+  display: grid;
+  column-gap: 16px;
+  grid-template-areas: "review-pic review-heading" "review-pic review-stars" "review-pic review-text";
+  grid-template-columns: max-content 1fr;
+}
+
+body#profile .review-section .reviews .review .review-pic {
+  border-radius: 50%;
+  grid-area: review-pic;
+}
+
+body#profile .review-section .reviews .review .review-heading {
+  display: flex;
+  column-gap: 8px;
+  grid-area: review-heading;
+}
+
+body#profile .review-section .reviews .review .review-heading .review-name {
+  font-weight: 500;
+}
+
+body#profile .review-section .reviews .review .review-heading .review-date {
+  font-size: 14px;
+  font-weight: 500;
+  color: #444;
+}
+
+body#profile .review-section .reviews .review .review-stars {
+  margin-top: 4px;
+  color: #fcbc47;
+  grid-area: review-stars;
+}
+
+body#profile .review-section .reviews .review .review-text {
+  margin-top: 8px;
+  grid-area: review-text;
 }
 
 body#profile .service-section {
