@@ -296,6 +296,47 @@ body#profile .service-section {
   grid-area: service;
 }
 
+body#profile .service-section .service button {
+  margin: 12px 0;
+  padding: 12px 0;
+  width: 100%;
+  background: #cc1634;
+  color: white;
+}
+
+body#profile .service-section .service button span {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+body#profile .service-section .service ul {
+  margin-bottom: 16px;
+}
+
+body#profile .service-section .service ul li {
+  list-style: none;
+  position: relative;
+  padding: 0 0 0 20px;
+  line-height: 1.5;
+}
+
+body#profile .service-section .service ul li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 5px;
+  width: 3px;
+  height: 6px;
+  border: solid black;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+body#profile .service-section .service .terms {
+  font-size: 15px;
+  font-style: italic;
+}
+
 body#profile .service-section .contact .heading {
   margin-bottom: 4px;
 }
