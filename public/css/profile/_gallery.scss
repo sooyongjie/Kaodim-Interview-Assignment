@@ -1,0 +1,32 @@
+.gallery {
+  grid-area: gallery;
+  .image-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .image {
+      position: relative;
+      img {
+        height: 150px;
+        width: 150px;
+      }
+      #view-all {
+        display: flex;
+        flex-direction: column;
+        row-gap: 4px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        span {
+          font-size: 16px;
+        }
+        .img-num {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}

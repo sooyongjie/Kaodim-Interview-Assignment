@@ -99,6 +99,384 @@ body#request form .form-buttons button span {
   }
 }
 
+.profile {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 0px 0px 16px 16px;
+}
+
+.profile .profile-banner {
+  height: 240px;
+  width: 100%;
+  background-image: url("../img/banner.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.profile .profile-content img {
+  width: 120px;
+  margin-top: -90px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.profile .profile-content .profile-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.profile .profile-content .profile-info .company {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+}
+
+.profile .profile-content .profile-info .company p.company-name {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.profile .profile-content .profile-info .company .company-description {
+  display: flex;
+  align-items: center;
+}
+
+.profile .profile-content .profile-info .company .company-description i.fa-check {
+  margin: 0 4px 0 12px;
+  font-size: 12px;
+}
+
+.profile .profile-content .profile-info .company .company-description span.verified {
+  font-weight: 500;
+}
+
+.profile .profile-content .profile-info .company-stats {
+  display: flex;
+  column-gap: 20px;
+  justify-content: right;
+}
+
+.profile .profile-content .profile-info .company-stats p.stats-num {
+  margin-bottom: 8px;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: right;
+}
+
+.profile .profile-content .profile-info .company-stats #rating-count {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  column-gap: 4px;
+}
+
+.profile .profile-content .profile-info .company-stats .fa-star {
+  font-size: 12px;
+}
+
+.gallery {
+  grid-area: gallery;
+}
+
+.gallery .image-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.gallery .image-container .image {
+  position: relative;
+}
+
+.gallery .image-container .image img {
+  height: 150px;
+  width: 150px;
+}
+
+.gallery .image-container .image #view-all {
+  display: flex;
+  flex-direction: column;
+  row-gap: 4px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.gallery .image-container .image #view-all span {
+  font-size: 16px;
+}
+
+.gallery .image-container .image #view-all .img-num {
+  font-size: 20px;
+}
+
+.review-section .ratings {
+  display: grid;
+  column-gap: 16px;
+  row-gap: 8px;
+  grid-template-areas: "5star summary" "4star summary" "3star summary" "2star summary" "1star summary";
+  grid-template-columns: auto 25%;
+}
+
+.review-section .ratings .five-star {
+  grid-area: "5star";
+}
+
+.review-section .ratings .four-star {
+  grid-area: "4star";
+}
+
+.review-section .ratings .three-star {
+  grid-area: "3star";
+}
+
+.review-section .ratings .two-star {
+  grid-area: "2star";
+}
+
+.review-section .ratings .one-star {
+  grid-area: "1star";
+}
+
+.review-section .ratings .ratings-summary {
+  grid-area: summary;
+}
+
+.review-section {
+  grid-area: ratings;
+}
+
+.review-section .ratings {
+  margin-bottom: 28px;
+}
+
+.review-section .ratings .star {
+  display: flex;
+  align-items: center;
+  column-gap: 16px;
+}
+
+.review-section .ratings .star span {
+  width: max-content !important;
+}
+
+.review-section .ratings .star .bar {
+  width: 100%;
+  position: relative;
+}
+
+.review-section .ratings .star .bar hr {
+  height: 8px;
+  border: none;
+  border-radius: 12px;
+}
+
+.review-section .ratings .star .bar hr.accent {
+  margin-top: -8px;
+  position: absolute;
+  width: 95%;
+  background: #dadada;
+  z-index: 3 !important;
+}
+
+.review-section .ratings .star .bar hr.background {
+  background: #aaa;
+  z-index: -1;
+}
+
+.review-section .ratings .ratings-summary {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.review-section .ratings .ratings-summary .average-rating {
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.review-section .compliments {
+  margin-bottom: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 12px;
+}
+
+.review-section .compliments .compliment {
+  display: flex;
+  align-items: center;
+  column-gap: 4px;
+  background: #dadada;
+  border-radius: 20px;
+}
+
+.review-section .compliments .compliment .compliment-title {
+  padding: 0 12px 0 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #444;
+}
+
+.review-section .compliments .compliment .compliment-count {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 30px;
+  font-size: 14px;
+  font-weight: 500;
+  background: #aaa;
+  border-radius: 50%;
+}
+
+.review-section .reviews {
+  display: flex;
+  flex-direction: column;
+}
+
+.review-section .reviews .more-reviews {
+  margin: 4px 0;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.review-section .reviews .review {
+  margin-bottom: 24px;
+  display: grid;
+  column-gap: 16px;
+  grid-template-areas: "review-pic review-heading" "review-pic review-stars" "review-pic review-text";
+  grid-template-columns: max-content 1fr;
+}
+
+.review-section .reviews .review .review-pic {
+  border-radius: 50%;
+  grid-area: review-pic;
+}
+
+.review-section .reviews .review .review-heading {
+  display: flex;
+  column-gap: 8px;
+  grid-area: review-heading;
+}
+
+.review-section .reviews .review .review-heading .review-name {
+  font-weight: 500;
+}
+
+.review-section .reviews .review .review-heading .review-date {
+  font-size: 14px;
+  font-weight: 500;
+  color: #444;
+}
+
+.review-section .reviews .review .review-stars {
+  margin-top: 4px;
+  color: #fcbc47;
+  grid-area: review-stars;
+}
+
+.review-section .reviews .review .review-text {
+  margin-top: 8px;
+  grid-area: review-text;
+}
+
+.service-section {
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+  grid-area: service;
+}
+
+.service-section .service button {
+  margin: 12px 0;
+  padding: 12px 0;
+  width: 100%;
+  background: #cc1634;
+  color: white;
+}
+
+.service-section .service button span {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.service-section .service ul {
+  margin-bottom: 16px;
+}
+
+.service-section .service ul li {
+  list-style: none;
+  position: relative;
+  padding: 0 0 0 20px;
+  line-height: 1.5;
+}
+
+.service-section .service ul li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 5px;
+  width: 3px;
+  height: 6px;
+  border: solid black;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.service-section .service .terms {
+  font-size: 15px;
+  font-style: italic;
+}
+
+.service-section .contact .heading {
+  margin-bottom: 4px;
+}
+
+.service-section .contact p {
+  margin-bottom: 12px;
+}
+
+.service-section .recommendations {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+}
+
+.service-section .recommendations .heading {
+  margin-bottom: 0;
+}
+
+.service-section .recommendations .related-service {
+  display: flex;
+  column-gap: 20px;
+}
+
+.service-section .recommendations .related-service img {
+  width: 100px;
+}
+
+.service-section .recommendations .related-service .related-service-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.service-section .recommendations .related-service .related-service-info h3 {
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
 body#profile {
   display: flex;
   align-items: center;
@@ -153,87 +531,9 @@ body#profile .container {
   row-gap: 40px;
 }
 
-body#profile .profile {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  border-radius: 0px 0px 16px 16px;
-}
-
-body#profile .profile .profile-banner {
-  height: 240px;
-  width: 100%;
-  background-image: url("../img/banner.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-body#profile .profile .profile-content {
+body#profile .profile-content,
+body#profile .content {
   width: 1200px;
-}
-
-body#profile .profile .profile-content img {
-  width: 120px;
-  margin-top: -90px;
-  border-radius: 50%;
-  margin-bottom: 20px;
-}
-
-body#profile .profile .profile-content .profile-info {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-body#profile .profile .profile-content .profile-info .company {
-  display: flex;
-  flex-direction: column;
-  row-gap: 8px;
-}
-
-body#profile .profile .profile-content .profile-info .company p.company-name {
-  font-size: 24px;
-  font-weight: 500;
-}
-
-body#profile .profile .profile-content .profile-info .company .company-description {
-  display: flex;
-  align-items: center;
-}
-
-body#profile .profile .profile-content .profile-info .company .company-description i.fa-check {
-  margin: 0 4px 0 12px;
-  font-size: 12px;
-}
-
-body#profile .profile .profile-content .profile-info .company .company-description span.verified {
-  font-weight: 500;
-}
-
-body#profile .profile .profile-content .profile-info .company-stats {
-  display: flex;
-  column-gap: 20px;
-  justify-content: right;
-}
-
-body#profile .profile .profile-content .profile-info .company-stats p.stats-num {
-  margin-bottom: 8px;
-  font-size: 20px;
-  font-weight: 500;
-  text-align: right;
-}
-
-body#profile .profile .profile-content .profile-info .company-stats #rating-count {
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  column-gap: 4px;
-}
-
-body#profile .profile .profile-content .profile-info .company-stats .fa-star {
-  font-size: 12px;
 }
 
 body#profile .content {
@@ -264,305 +564,6 @@ body#profile .section .heading {
 
 body#profile .about {
   grid-area: about;
-}
-
-body#profile .gallery {
-  grid-area: gallery;
-}
-
-body#profile .gallery .image-container {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-body#profile .gallery .image-container .image {
-  position: relative;
-}
-
-body#profile .gallery .image-container .image img {
-  height: 150px;
-  width: 150px;
-}
-
-body#profile .gallery .image-container .image #view-all {
-  display: flex;
-  flex-direction: column;
-  row-gap: 4px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-}
-
-body#profile .gallery .image-container .image #view-all span {
-  font-size: 16px;
-}
-
-body#profile .gallery .image-container .image #view-all .img-num {
-  font-size: 20px;
-}
-
-body#profile .review-section .ratings {
-  display: grid;
-  column-gap: 16px;
-  row-gap: 8px;
-  grid-template-areas: "5star summary" "4star summary" "3star summary" "2star summary" "1star summary";
-  grid-template-columns: auto 25%;
-}
-
-body#profile .review-section .ratings .five-star {
-  grid-area: "5star";
-}
-
-body#profile .review-section .ratings .four-star {
-  grid-area: "4star";
-}
-
-body#profile .review-section .ratings .three-star {
-  grid-area: "3star";
-}
-
-body#profile .review-section .ratings .two-star {
-  grid-area: "2star";
-}
-
-body#profile .review-section .ratings .one-star {
-  grid-area: "1star";
-}
-
-body#profile .review-section .ratings .ratings-summary {
-  grid-area: summary;
-}
-
-body#profile .review-section {
-  grid-area: ratings;
-}
-
-body#profile .review-section .ratings {
-  margin-bottom: 28px;
-}
-
-body#profile .review-section .ratings .star {
-  display: flex;
-  align-items: center;
-  column-gap: 16px;
-}
-
-body#profile .review-section .ratings .star span {
-  width: max-content !important;
-}
-
-body#profile .review-section .ratings .star .bar {
-  width: 100%;
-  position: relative;
-}
-
-body#profile .review-section .ratings .star .bar hr {
-  height: 8px;
-  border: none;
-  border-radius: 12px;
-}
-
-body#profile .review-section .ratings .star .bar hr.accent {
-  margin-top: -8px;
-  position: absolute;
-  width: 95%;
-  background: #dadada;
-  z-index: 3 !important;
-}
-
-body#profile .review-section .ratings .star .bar hr.background {
-  background: #aaa;
-  z-index: -1;
-}
-
-body#profile .review-section .ratings .ratings-summary {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-body#profile .review-section .ratings .ratings-summary .average-rating {
-  font-size: 32px;
-  font-weight: 500;
-}
-
-body#profile .review-section .compliments {
-  margin-bottom: 32px;
-  display: flex;
-  flex-wrap: wrap;
-  column-gap: 12px;
-}
-
-body#profile .review-section .compliments .compliment {
-  display: flex;
-  align-items: center;
-  column-gap: 4px;
-  background: #dadada;
-  border-radius: 20px;
-}
-
-body#profile .review-section .compliments .compliment .compliment-title {
-  padding: 0 12px 0 2px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 30px;
-  font-size: 14px;
-  font-weight: 500;
-  color: #444;
-}
-
-body#profile .review-section .compliments .compliment .compliment-count {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 30px;
-  width: 30px;
-  font-size: 14px;
-  font-weight: 500;
-  background: #aaa;
-  border-radius: 50%;
-}
-
-body#profile .review-section .reviews {
-  display: flex;
-  flex-direction: column;
-}
-
-body#profile .review-section .reviews .more-reviews {
-  margin: 4px 0;
-  font-weight: 500;
-  font-size: 14px;
-}
-
-body#profile .review-section .reviews .review {
-  margin-bottom: 24px;
-  display: grid;
-  column-gap: 16px;
-  grid-template-areas: "review-pic review-heading" "review-pic review-stars" "review-pic review-text";
-  grid-template-columns: max-content 1fr;
-}
-
-body#profile .review-section .reviews .review .review-pic {
-  border-radius: 50%;
-  grid-area: review-pic;
-}
-
-body#profile .review-section .reviews .review .review-heading {
-  display: flex;
-  column-gap: 8px;
-  grid-area: review-heading;
-}
-
-body#profile .review-section .reviews .review .review-heading .review-name {
-  font-weight: 500;
-}
-
-body#profile .review-section .reviews .review .review-heading .review-date {
-  font-size: 14px;
-  font-weight: 500;
-  color: #444;
-}
-
-body#profile .review-section .reviews .review .review-stars {
-  margin-top: 4px;
-  color: #fcbc47;
-  grid-area: review-stars;
-}
-
-body#profile .review-section .reviews .review .review-text {
-  margin-top: 8px;
-  grid-area: review-text;
-}
-
-body#profile .service-section {
-  display: flex;
-  flex-direction: column;
-  row-gap: 40px;
-  grid-area: service;
-}
-
-body#profile .service-section .service button {
-  margin: 12px 0;
-  padding: 12px 0;
-  width: 100%;
-  background: #cc1634;
-  color: white;
-}
-
-body#profile .service-section .service button span {
-  font-size: 15px;
-  font-weight: 500;
-}
-
-body#profile .service-section .service ul {
-  margin-bottom: 16px;
-}
-
-body#profile .service-section .service ul li {
-  list-style: none;
-  position: relative;
-  padding: 0 0 0 20px;
-  line-height: 1.5;
-}
-
-body#profile .service-section .service ul li::before {
-  content: "";
-  position: absolute;
-  left: 2px;
-  top: 5px;
-  width: 3px;
-  height: 6px;
-  border: solid black;
-  border-width: 0 2px 2px 0;
-  transform: rotate(45deg);
-}
-
-body#profile .service-section .service .terms {
-  font-size: 15px;
-  font-style: italic;
-}
-
-body#profile .service-section .contact .heading {
-  margin-bottom: 4px;
-}
-
-body#profile .service-section .contact p {
-  margin-bottom: 12px;
-}
-
-body#profile .service-section .recommendations {
-  display: flex;
-  flex-direction: column;
-  row-gap: 24px;
-}
-
-body#profile .service-section .recommendations .heading {
-  margin-bottom: 0;
-}
-
-body#profile .service-section .recommendations .related-service {
-  display: flex;
-  column-gap: 20px;
-}
-
-body#profile .service-section .recommendations .related-service img {
-  width: 100px;
-}
-
-body#profile .service-section .recommendations .related-service .related-service-info {
-  display: flex;
-  flex-direction: column;
-}
-
-body#profile .service-section .recommendations .related-service .related-service-info h3 {
-  margin-bottom: 4px;
-  font-weight: 500;
 }
 
 body#profile footer {

@@ -1,0 +1,68 @@
+.profile {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 0px 0px 16px 16px;
+  .profile-banner {
+    height: 240px;
+    width: 100%;
+    background-image: url("../img/banner.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .profile-content {
+    img {
+      width: 120px;
+      margin-top: -90px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+    .profile-info {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .company {
+        display: flex;
+        flex-direction: column;
+        row-gap: 8px;
+        p.company-name {
+          font-size: 24px;
+          font-weight: 500;
+        }
+        .company-description {
+          display: flex;
+          align-items: center;
+          i.fa-check {
+            margin: 0 4px 0 12px;
+            font-size: 12px;
+          }
+          span.verified {
+            font-weight: 500;
+          }
+        }
+      }
+      .company-stats {
+        display: flex;
+        column-gap: 20px;
+        justify-content: right;
+        p.stats-num {
+          margin-bottom: 8px;
+          font-size: 20px;
+          font-weight: 500;
+          text-align: right;
+        }
+        #rating-count {
+          display: flex;
+          justify-content: end;
+          align-items: center;
+          column-gap: 4px;
+        }
+        .fa-star {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
