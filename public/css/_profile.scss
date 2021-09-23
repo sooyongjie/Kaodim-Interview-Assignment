@@ -218,6 +218,7 @@ body#profile {
   .review-section {
     grid-area: ratings;
     .ratings {
+      margin-bottom: 28px;
       .star {
         display: flex;
         align-items: center;
@@ -229,12 +230,12 @@ body#profile {
           width: 100%;
           position: relative;
           hr {
-            height: 12px;
+            height: 8px;
             border: none;
             border-radius: 12px;
           }
           hr.accent {
-            margin-top: -12px;
+            margin-top: -8px;
             position: absolute;
             width: 95%;
             background: #dadada;
@@ -252,12 +253,13 @@ body#profile {
         justify-content: center;
         align-items: center;
         .average-rating {
-          font-size: 28px;
+          font-size: 32px;
           font-weight: 500;
         }
       }
     }
     .compliments {
+      margin-bottom: 32px;
       display: flex;
       flex-wrap: wrap;
       column-gap: 12px;

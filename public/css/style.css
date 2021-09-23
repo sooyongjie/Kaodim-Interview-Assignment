@@ -320,6 +320,10 @@ body#profile .review-section {
   grid-area: ratings;
 }
 
+body#profile .review-section .ratings {
+  margin-bottom: 28px;
+}
+
 body#profile .review-section .ratings .star {
   display: flex;
   align-items: center;
@@ -336,13 +340,13 @@ body#profile .review-section .ratings .star .bar {
 }
 
 body#profile .review-section .ratings .star .bar hr {
-  height: 12px;
+  height: 8px;
   border: none;
   border-radius: 12px;
 }
 
 body#profile .review-section .ratings .star .bar hr.accent {
-  margin-top: -12px;
+  margin-top: -8px;
   position: absolute;
   width: 95%;
   background: #dadada;
@@ -362,11 +366,12 @@ body#profile .review-section .ratings .ratings-summary {
 }
 
 body#profile .review-section .ratings .ratings-summary .average-rating {
-  font-size: 28px;
+  font-size: 32px;
   font-weight: 500;
 }
 
 body#profile .review-section .compliments {
+  margin-bottom: 32px;
   display: flex;
   flex-wrap: wrap;
   column-gap: 12px;
