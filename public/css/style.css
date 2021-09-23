@@ -367,6 +367,43 @@ body#profile .review-section .ratings .ratings-summary .average-rating {
   font-weight: 500;
 }
 
+body#profile .review-section .compliments {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 12px;
+}
+
+body#profile .review-section .compliments .compliment {
+  display: flex;
+  align-items: center;
+  column-gap: 4px;
+  background: #dadada;
+  border-radius: 20px;
+}
+
+body#profile .review-section .compliments .compliment .compliment-title {
+  padding: 0 12px 0 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #444;
+}
+
+body#profile .review-section .compliments .compliment .compliment-count {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 30px;
+  font-size: 14px;
+  font-weight: 500;
+  background: #aaa;
+  border-radius: 50%;
+}
+
 body#profile .service-section {
   display: flex;
   flex-direction: column;
