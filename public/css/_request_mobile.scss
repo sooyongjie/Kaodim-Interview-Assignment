@@ -1,0 +1,34 @@
+@media only screen and (max-width: 1365px) {
+  $content-width: 1000px;
+
+  body#profile {
+    .profile-content,
+    .content {
+      width: $content-width !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  $content-width: 800px;
+
+  body#profile {
+    .profile-content,
+    .content {
+      width: $content-width !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  $content-width: 600px;
+
+  body#profile {
+    .profile-content,
+    .content {
+      width: $content-width !important;
+    }
+  }
+}
+
+

@@ -78,6 +78,27 @@ body#request form .form-buttons button span {
   font-family: "Roboto Mono", monospace;
 }
 
+@media only screen and (max-width: 1365px) {
+  body#profile .profile-content,
+  body#profile .content {
+    width: 1000px !important;
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  body#profile .profile-content,
+  body#profile .content {
+    width: 800px !important;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  body#profile .profile-content,
+  body#profile .content {
+    width: 600px !important;
+  }
+}
+
 body#profile {
   display: flex;
   align-items: center;
