@@ -183,9 +183,81 @@ body#profile {
     }
   }
 
-  .ratings {
+  // grid
+  .review-section .ratings {
+    display: grid;
+    column-gap: 16px;
+    row-gap: 8px;
+    grid-template-areas:
+      "5star summary"
+      "4star summary"
+      "3star summary"
+      "2star summary"
+      "1star summary";
+    grid-template-columns: auto 25%;
+    .five-star {
+      grid-area: "5star";
+    }
+    .four-star {
+      grid-area: "4star";
+    }
+    .three-star {
+      grid-area: "3star";
+    }
+    .two-star {
+      grid-area: "2star";
+    }
+    .one-star {
+      grid-area: "1star";
+    }
+    .ratings-summary {
+      grid-area: summary;
+    }
+  }
+
+  .review-section {
     height: 360px;
     grid-area: ratings;
+    .ratings {
+      .star {
+        display: flex;
+        align-items: center;
+        column-gap: 16px;
+        span {
+          width: max-content !important;
+        }
+        .bar {
+          width: 100%;
+          position: relative;
+          hr {
+            height: 12px;
+            border: none;
+            border-radius: 12px;
+          }
+          hr.accent {
+            margin-top: -12px;
+            position: absolute;
+            width: 95%;
+            background: #dadada;
+            z-index: 3 !important;
+          }
+          hr.background {
+            background: #aaa;
+            z-index: -1;
+          }
+        }
+      }
+      .ratings-summary {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .average-rating {
+          font-size: 28px;
+          font-weight: 500;
+        }
+      }
+    }
   }
 
   .service-section {

@@ -284,9 +284,87 @@ body#profile .gallery .image-container .image #view-all .img-num {
   font-size: 20px;
 }
 
-body#profile .ratings {
+body#profile .review-section .ratings {
+  display: grid;
+  column-gap: 16px;
+  row-gap: 8px;
+  grid-template-areas: "5star summary" "4star summary" "3star summary" "2star summary" "1star summary";
+  grid-template-columns: auto 25%;
+}
+
+body#profile .review-section .ratings .five-star {
+  grid-area: "5star";
+}
+
+body#profile .review-section .ratings .four-star {
+  grid-area: "4star";
+}
+
+body#profile .review-section .ratings .three-star {
+  grid-area: "3star";
+}
+
+body#profile .review-section .ratings .two-star {
+  grid-area: "2star";
+}
+
+body#profile .review-section .ratings .one-star {
+  grid-area: "1star";
+}
+
+body#profile .review-section .ratings .ratings-summary {
+  grid-area: summary;
+}
+
+body#profile .review-section {
   height: 360px;
   grid-area: ratings;
+}
+
+body#profile .review-section .ratings .star {
+  display: flex;
+  align-items: center;
+  column-gap: 16px;
+}
+
+body#profile .review-section .ratings .star span {
+  width: max-content !important;
+}
+
+body#profile .review-section .ratings .star .bar {
+  width: 100%;
+  position: relative;
+}
+
+body#profile .review-section .ratings .star .bar hr {
+  height: 12px;
+  border: none;
+  border-radius: 12px;
+}
+
+body#profile .review-section .ratings .star .bar hr.accent {
+  margin-top: -12px;
+  position: absolute;
+  width: 95%;
+  background: #dadada;
+  z-index: 3 !important;
+}
+
+body#profile .review-section .ratings .star .bar hr.background {
+  background: #aaa;
+  z-index: -1;
+}
+
+body#profile .review-section .ratings .ratings-summary {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+body#profile .review-section .ratings .ratings-summary .average-rating {
+  font-size: 28px;
+  font-weight: 500;
 }
 
 body#profile .service-section {
