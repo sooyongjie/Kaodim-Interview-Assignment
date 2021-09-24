@@ -132,15 +132,17 @@
     }
     .review-heading {
       display: flex;
+      align-items: center;
       column-gap: 8px;
+      row-gap: 4px;
       grid-area: review-heading;
       .review-name {
         font-weight: 500;
       }
       .review-date {
-        font-size: 14px;
+        font-size: 13px;
         font-weight: 500;
-        color: #444;
+        color: #666;
       }
     }
     .review-stars {

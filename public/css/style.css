@@ -116,6 +116,21 @@ body#request form .form-buttons button span {
   body#profile .image img {
     width: 310px !important;
   }
+  body#profile .review-section .rating-percentage {
+    display: none;
+  }
+  body#profile .review-section .ratings-summary :nth-child(2) {
+    text-align: center;
+  }
+  body#profile .review-section .review-heading {
+    margin-bottom: 4px;
+    flex-direction: column;
+    align-items: unset;
+    justify-content: center;
+  }
+  body#profile .review-section .fa-star {
+    font-size: 15px;
+  }
   body#profile .related-service {
     flex-direction: column;
   }
@@ -446,7 +461,9 @@ body#request form .form-buttons button span {
 
 .review-section .reviews .review .review-heading {
   display: flex;
+  align-items: center;
   column-gap: 8px;
+  row-gap: 4px;
   grid-area: review-heading;
 }
 
@@ -455,9 +472,9 @@ body#request form .form-buttons button span {
 }
 
 .review-section .reviews .review .review-heading .review-date {
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 500;
-  color: #444;
+  color: #666;
 }
 
 .review-section .reviews .review .review-stars {

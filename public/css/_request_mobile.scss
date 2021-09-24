@@ -54,6 +54,23 @@
         width: 310px !important;
       }
     }
+    .review-section {
+      .rating-percentage {
+        display: none;
+      }
+      .ratings-summary :nth-child(2) {
+        text-align: center;
+      }
+      .review-heading {
+        margin-bottom: 4px;
+        flex-direction: column;
+        align-items: unset;
+        justify-content: center;
+      }
+      .fa-star {
+        font-size: 15px;
+      }
+    }
     .related-service {
       flex-direction: column;
       img {
@@ -118,7 +135,6 @@
 @media only screen and (max-width: 400px) {
   $content-width: 300px;
   body#profile {
-    
     .profile-content,
     .content {
       width: $content-width !important;
