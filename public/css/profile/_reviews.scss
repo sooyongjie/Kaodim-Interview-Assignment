@@ -37,6 +37,21 @@
       display: flex;
       align-items: center;
       column-gap: 16px;
+      &:nth-child(1) hr.accent {
+        width: 92% !important;
+      }
+      &:nth-child(2) hr.accent {
+        width: 6% !important;
+      }
+      &:nth-child(3) hr.accent {
+        width: 0% !important;
+      }
+      &:nth-child(4) hr.accent {
+        width: 1% !important;
+      }
+      &:nth-child(5) hr.accent {
+        width: 2% !important;
+      }
       span {
         width: max-content !important;
       }
@@ -51,12 +66,11 @@
         hr.accent {
           margin-top: -8px;
           position: absolute;
-          width: 95%;
-          background: #dadada;
+          background: $red;
           z-index: 3 !important;
         }
         hr.background {
-          background: #aaa;
+          background: #f4d0d6;
           z-index: -1;
         }
       }
@@ -83,7 +97,7 @@
       display: flex;
       align-items: center;
       column-gap: 4px;
-      background: #dadada;
+      background: #ffebf0;
       border-radius: 20px;
       .compliment-title {
         padding: 0 12px 0 2px;
@@ -93,7 +107,7 @@
         height: 30px;
         font-size: 14px;
         font-weight: 500;
-        color: #444;
+        color: $red;
       }
       .compliment-count {
         display: flex;
@@ -103,7 +117,8 @@
         width: 30px;
         font-size: 14px;
         font-weight: 500;
-        background: #aaa;
+        background: $red;
+        color: white;
         border-radius: 50%;
       }
     }
@@ -127,6 +142,7 @@
       "review-pic review-text";
     grid-template-columns: max-content 1fr;
     .review-pic {
+      width: 50px;
       border-radius: 50%;
       grid-area: review-pic;
     }

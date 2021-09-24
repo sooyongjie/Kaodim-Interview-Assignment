@@ -289,6 +289,11 @@ body#request form .form-buttons button span {
   align-items: center;
 }
 
+.profile .profile-content .profile-info .company .company-description i,
+.profile .profile-content .profile-info .company .company-description span {
+  color: #3bba22;
+}
+
 .profile .profile-content .profile-info .company .company-description i.fa-check {
   margin: 0 4px 0 12px;
   font-size: 12px;
@@ -307,8 +312,7 @@ body#request form .form-buttons button span {
 
 .profile .profile-content .profile-info .company-stats .line {
   height: 50px;
-  background: black;
-  border-right: 1px solid black;
+  border-right: 1px solid #dadada;
 }
 
 .profile .profile-content .profile-info .company-stats p.stats-num {
@@ -320,12 +324,13 @@ body#request form .form-buttons button span {
 
 .profile .profile-content .profile-info .company-stats #rating-count {
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
   align-items: center;
   column-gap: 4px;
 }
 
 .profile .profile-content .profile-info .company-stats .fa-star {
+  color: #fcbc47;
   font-size: 12px;
 }
 
@@ -345,6 +350,7 @@ body#request form .form-buttons button span {
 
 .gallery .image-container .image img {
   width: 150px;
+  object-fit: fill;
 }
 
 .gallery .image-container .image #view-all {
@@ -412,6 +418,26 @@ body#request form .form-buttons button span {
   column-gap: 16px;
 }
 
+.review-section .ratings .star:nth-child(1) hr.accent {
+  width: 92% !important;
+}
+
+.review-section .ratings .star:nth-child(2) hr.accent {
+  width: 6% !important;
+}
+
+.review-section .ratings .star:nth-child(3) hr.accent {
+  width: 0% !important;
+}
+
+.review-section .ratings .star:nth-child(4) hr.accent {
+  width: 1% !important;
+}
+
+.review-section .ratings .star:nth-child(5) hr.accent {
+  width: 2% !important;
+}
+
 .review-section .ratings .star span {
   width: max-content !important;
 }
@@ -430,13 +456,12 @@ body#request form .form-buttons button span {
 .review-section .ratings .star .bar hr.accent {
   margin-top: -8px;
   position: absolute;
-  width: 95%;
-  background: #dadada;
+  background: #cc1634;
   z-index: 3 !important;
 }
 
 .review-section .ratings .star .bar hr.background {
-  background: #aaa;
+  background: #f4d0d6;
   z-index: -1;
 }
 
@@ -464,7 +489,7 @@ body#request form .form-buttons button span {
   display: flex;
   align-items: center;
   column-gap: 4px;
-  background: #dadada;
+  background: #ffebf0;
   border-radius: 20px;
 }
 
@@ -476,7 +501,7 @@ body#request form .form-buttons button span {
   height: 30px;
   font-size: 14px;
   font-weight: 500;
-  color: #444;
+  color: #cc1634;
 }
 
 .review-section .compliments .compliment .compliment-count {
@@ -487,7 +512,8 @@ body#request form .form-buttons button span {
   width: 30px;
   font-size: 14px;
   font-weight: 500;
-  background: #aaa;
+  background: #cc1634;
+  color: white;
   border-radius: 50%;
 }
 
@@ -511,6 +537,7 @@ body#request form .form-buttons button span {
 }
 
 .review-section .reviews .review .review-pic {
+  width: 50px;
   border-radius: 50%;
   grid-area: review-pic;
 }

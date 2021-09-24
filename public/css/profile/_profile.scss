@@ -37,6 +37,10 @@
         .company-description {
           display: flex;
           align-items: center;
+          i,
+          span {
+            color: #3bba22;
+          }
           i.fa-check {
             margin: 0 4px 0 12px;
             font-size: 12px;
@@ -53,8 +57,7 @@
         align-items: center;
         .line {
           height: 50px;
-          background: black;
-          border-right: 1px solid black;
+          border-right: 1px solid #dadada;
         }
         p.stats-num {
           margin-bottom: 8px;
@@ -64,11 +67,12 @@
         }
         #rating-count {
           display: flex;
-          justify-content: end;
+          justify-content: space-between;
           align-items: center;
           column-gap: 4px;
         }
         .fa-star {
+          color: #fcbc47;
           font-size: 12px;
         }
       }
