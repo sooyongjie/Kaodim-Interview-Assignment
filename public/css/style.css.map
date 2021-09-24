@@ -6,7 +6,7 @@
         "_request.scss",
         "_colors.scss",
         "_profile.scss",
-        "_request_mobile.scss",
+        "_profile_mobile.scss",
         "profile/_profile.scss",
         "profile/_gallery.scss",
         "profile/_reviews.scss",
