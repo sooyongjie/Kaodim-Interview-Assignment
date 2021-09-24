@@ -106,6 +106,12 @@ body#request form .form-buttons button span {
 }
 
 @media only screen and (max-width: 979px) {
+  body#profile nav {
+    grid-template-columns: 0.3fr 0.7fr !important;
+  }
+  body#profile nav div {
+    display: none;
+  }
   body#profile .profile-content,
   body#profile .content {
     width: 600px !important;
@@ -189,6 +195,9 @@ body#request form .form-buttons button span {
 }
 
 @media only screen and (max-width: 599px) {
+  body#profile nav {
+    grid-template-columns: 0.4fr 0.6fr !important;
+  }
   body#profile .profile-content,
   body#profile .content {
     width: 350px !important;
@@ -625,7 +634,7 @@ body#profile nav {
 }
 
 body#profile nav img {
-  height: 30px;
+  height: 25px;
 }
 
 body#profile nav form {
