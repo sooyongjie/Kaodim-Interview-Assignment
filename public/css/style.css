@@ -141,7 +141,7 @@ body#request form .form-buttons button span {
   }
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 699px) {
   body#profile .profile-content {
     row-gap: unset !important;
   }
@@ -163,7 +163,7 @@ body#request form .form-buttons button span {
   }
   body#profile .profile-content,
   body#profile .content {
-    width: 350px !important;
+    width: 500px !important;
     column-gap: 40px;
     row-gap: 40px;
     grid-template-areas: "about" "gallery" "ratings" "service" !important;
@@ -171,9 +171,44 @@ body#request form .form-buttons button span {
     grid-template-columns: unset !important;
     align-self: center;
   }
+  body#profile .profile-content .gallery .image:nth-child(3),
+  body#profile .content .gallery .image:nth-child(3) {
+    display: unset !important;
+  }
   body#profile .profile-content .gallery .image img,
   body#profile .content .gallery .image img {
+    width: 210px !important;
+  }
+  body#profile .related-service {
+    flex-direction: initial;
+  }
+  body#profile .related-service img {
+    margin-bottom: 16px;
+    height: 100px;
+  }
+}
+
+@media only screen and (max-width: 599px) {
+  body#profile .profile-content,
+  body#profile .content {
+    width: 350px !important;
+  }
+  body#profile .gallery .image-container {
+    flex-wrap: wrap;
+    row-gap: 28px;
+  }
+  body#profile .gallery .image-container .image:nth-child(3) {
+    display: none !important;
+  }
+  body#profile .gallery .image-container .image img {
     width: 300px !important;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  body#profile .profile-content,
+  body#profile .content {
+    width: 350px !important;
   }
 }
 
