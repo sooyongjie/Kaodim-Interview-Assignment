@@ -50,11 +50,17 @@
         display: flex;
         column-gap: 20px;
         justify-content: right;
+        align-items: center;
+        .line {
+          height: 50px;
+          background: black;
+          border-right: 1px solid black;
+        }
         p.stats-num {
           margin-bottom: 8px;
           font-size: 20px;
           font-weight: 500;
-          text-align: right;
+          text-align: right !important;
         }
         #rating-count {
           display: flex;

@@ -184,13 +184,16 @@
   }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 399px) {
   $content-width: 300px;
   body#profile {
     .profile-content,
     .content {
       width: $content-width !important;
-
+      .company-stats p {
+        float: right;
+        width: max-content;
+      }
       .gallery .image {
         img {
           width: 250px !important;

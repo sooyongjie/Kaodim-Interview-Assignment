@@ -221,10 +221,15 @@ body#request form .form-buttons button span {
   }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 399px) {
   body#profile .profile-content,
   body#profile .content {
     width: 300px !important;
+  }
+  body#profile .profile-content .company-stats p,
+  body#profile .content .company-stats p {
+    float: right;
+    width: max-content;
   }
   body#profile .profile-content .gallery .image img,
   body#profile .content .gallery .image img {
@@ -297,13 +302,20 @@ body#request form .form-buttons button span {
   display: flex;
   column-gap: 20px;
   justify-content: right;
+  align-items: center;
+}
+
+.profile .profile-content .profile-info .company-stats .line {
+  height: 50px;
+  background: black;
+  border-right: 1px solid black;
 }
 
 .profile .profile-content .profile-info .company-stats p.stats-num {
   margin-bottom: 8px;
   font-size: 20px;
   font-weight: 500;
-  text-align: right;
+  text-align: right !important;
 }
 
 .profile .profile-content .profile-info .company-stats #rating-count {
