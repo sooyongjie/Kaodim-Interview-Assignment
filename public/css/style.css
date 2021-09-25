@@ -20,10 +20,6 @@ body#request .container {
   border-radius: 12px;
 }
 
-body#request #form-title {
-  width: max-content;
-}
-
 body#request hr {
   margin: 28px 0;
   border: none;
@@ -57,11 +53,12 @@ body#request form textarea {
 }
 
 body#request form textarea.error {
-  border: 1px solid #cc1634;
+  border: 1px solid #cc1634 !important;
   background: #fcf5f6;
 }
 
 body#request form textarea:focus {
+  border: 1px solid #ccc;
   outline: none;
 }
 
@@ -102,7 +99,34 @@ body#request .summary h3 {
 }
 
 body#request .summary p {
-  margin-bottom: 16px;
+  margin-bottom: 24px;
+}
+
+@media only screen and (max-width: 999px) {
+  body#request .container {
+    width: 400px;
+  }
+}
+
+@media only screen and (max-width: 699px) {
+  body#request .container {
+    width: 300px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  body#request .container {
+    width: 250px;
+  }
+  body#request .container textarea {
+    height: calc(3 * 15px * 1.5) !important;
+  }
+}
+
+@media only screen and (max-width: 374px) {
+  body#request .container {
+    width: 200px;
+  }
 }
 
 @media only screen and (max-width: 1365px) {
