@@ -65,7 +65,7 @@ window.onload = () => {
 };
 
 const enableButton = (x) => {
-  if(x) {
+  if (x) {
     formInput.classList.remove("error")
     nextBtn.disabled = false
   }
@@ -91,6 +91,7 @@ const checkCharLength = () => {
   else {
     enableButton(false)
   }
+  formInput.focus()
 }
 
 formInput.oninput = () => {
@@ -110,7 +111,7 @@ const loadQuestions = (arr) => {
   is_required = arr.is_required
 
   formInput.value = "";
-  formInput.focus()
+  formTitle.textContent = formObject.title
   formQues.textContent = prompt;
   quesNum.textContent = `${currQues + 1}. `;
   formInput.value = userInput[currQues]
