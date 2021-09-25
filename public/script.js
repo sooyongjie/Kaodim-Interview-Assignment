@@ -68,13 +68,16 @@ const enableButton = (x) => {
   if (x) {
     formInput.classList.remove("error")
     nextBtn.disabled = false
+    nextBtn.classList.remove("disabled")
   }
   else {
     formInput.classList.add("error")
     nextBtn.disabled = true
+    nextBtn.classList.add("disabled")
   }
 }
 
+// enable or disable button
 const checkCharLength = () => {
   if (!is_required && charLen == 0) {
     enableButton(true)
@@ -94,11 +97,13 @@ const checkCharLength = () => {
   formInput.focus()
 }
 
+// check if input meets min requirements
 formInput.oninput = () => {
   charLen = formInput.value.length;
   checkCharLength()
 };
 
+// used when loading question
 const checkInput = () => {
   charLen = formInput.value.length;
   checkCharLength()
@@ -120,6 +125,7 @@ const loadQuestions = (arr) => {
   checkInput()
 };
 
+// next question
 nextBtn.onclick = () => {
   if (currQues < numOfQues) {
     userInput[currQues] = formInput.value;
@@ -130,22 +136,27 @@ nextBtn.onclick = () => {
     userInput[currQues] = formInput.value;
     form.style.display = "none";
     summary.style.display = "block"
+    nextBtn.style.display = "none"
     showSummary = true;
     generateSummary()
   }
 };
 
+// prev question
 prevBtn.onclick = () => {
   console.log(showSummary);
   if (showSummary) {
     showSummary = false;
+    summary.innerHTML = ""
+    nextBtn.style.display = "block"
     form.style.display = "block";
     summary.style.display = "none"
     console.log('currQues: ', currQues);
     loadQuestions(formObject.questions[currQues]);
   }
   else if (currQues >= 1) {
-    currQues--;
+    userInput[currQues] = formInput.value;
+    --currQues;
     loadQuestions(formObject.questions[currQues]);
   }
 
