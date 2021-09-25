@@ -21,12 +21,16 @@
     </div>
     <hr>
     <form>
-      <div class="form-header">
-        <span id="question-num">0.</span>
-        <h3 id="form-question">Could this be the Form question?</h3>
+      <div class="form-details">
+        <div class="form-header">
+          <span id="question-num">0.</span>
+          <h3 id="form-question">Could this be the Form question?</h3>
+        </div>
+        <textarea type="text" id="form-input" placeholder="Enter your answer here"></textarea>
+        <span id="requirements"></span>
       </div>
-      <textarea type="text" id="form-input" placeholder="Enter your answer here" ></textarea>
-      <span id="requirements"></span>
+      <div class="summary">
+      </div>
       <div class="form-buttons">
         <button type="button" id="prev-btn">
           <span>Previous</span>
@@ -36,6 +40,7 @@
         </button>
       </div>
     </form>
+
   </div>
 </body>
 <script defer src="./script.js"></script>

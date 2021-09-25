@@ -1,4 +1,4 @@
-const form = {
+const formObject = {
   title: "This is a title for the form Header",
   questions: [
     {
@@ -28,13 +28,16 @@ const form = {
 const prevBtn = document.querySelector("#prev-btn");
 const nextBtn = document.querySelector("#next-btn");
 const formTitle = document.querySelector("#form-title");
+const form = document.querySelector('.form-details')
 const formQues = document.querySelector("#form-question");
 const formInput = document.querySelector("#form-input");
 const requirementTxt = document.querySelector("#requirements")
 const quesNum = document.querySelector("#question-num");
 const element = document.querySelector("#elID");
-const userInput = ['', '', ''];
+let userInput = ['', '', ''];
+let showSummary = false;
 
+const summary = document.querySelector('.summary')
 
 let currQues = 0;
 let numOfQues;
@@ -43,13 +46,33 @@ let min_char_length = 0;
 let is_required = false;
 
 
+let generateSummary = () => {
+  for (let i = 0; i < numOfQues + 1; i++) {
+    let pNode = document.createElement("p")
+    console.log(userInput[1]);
+    pNode.textContent = userInput[i]
+    let h3Node = document.createElement("h3")
+    h3Node.textContent = formObject.questions[i].prompt
+    summary.appendChild(h3Node)
+    summary.appendChild(pNode)
+    formTitle.textContent = "Summary"
+  }
+}
+
 window.onload = () => {
-  loadQuestions(form.questions[currQues]);
-  numOfQues = form.questions.length - 1;
+  loadQuestions(formObject.questions[currQues]);
+  numOfQues = formObject.questions.length - 1;
 };
 
 const enableButton = (x) => {
-  x ? nextBtn.disabled = false : nextBtn.disabled = true
+  if(x) {
+    formInput.classList.remove("error")
+    nextBtn.disabled = false
+  }
+  else {
+    formInput.classList.add("error")
+    nextBtn.disabled = true
+  }
 }
 
 const checkCharLength = () => {
@@ -87,6 +110,7 @@ const loadQuestions = (arr) => {
   is_required = arr.is_required
 
   formInput.value = "";
+  formInput.focus()
   formQues.textContent = prompt;
   quesNum.textContent = `${currQues + 1}. `;
   formInput.value = userInput[currQues]
@@ -99,13 +123,29 @@ nextBtn.onclick = () => {
   if (currQues < numOfQues) {
     userInput[currQues] = formInput.value;
     ++currQues;
-    loadQuestions(form.questions[currQues]);
+    loadQuestions(formObject.questions[currQues]);
+  }
+  else if (currQues == numOfQues) {
+    userInput[currQues] = formInput.value;
+    form.style.display = "none";
+    summary.style.display = "block"
+    showSummary = true;
+    generateSummary()
   }
 };
 
 prevBtn.onclick = () => {
-  if (currQues >= 1) {
-    --currQues;
-    loadQuestions(form.questions[currQues]);
+  console.log(showSummary);
+  if (showSummary) {
+    showSummary = false;
+    form.style.display = "block";
+    summary.style.display = "none"
+    console.log('currQues: ', currQues);
+    loadQuestions(formObject.questions[currQues]);
   }
+  else if (currQues >= 1) {
+    currQues--;
+    loadQuestions(formObject.questions[currQues]);
+  }
+
 };
