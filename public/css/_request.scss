@@ -53,6 +53,11 @@ body#request {
       line-height: 1.5;
       border: 1px solid #f2f2f2;
       border-radius: 6px;
+      transition: 0.2s ease-in-out;
+      &.error {
+        border: 1px solid $red;
+        background: #fcf5f6;
+      }
       &:focus {
         outline: none;
       }
@@ -81,6 +86,16 @@ body#request {
           font-family: "Roboto Mono", monospace;
         }
       }
+    }
+  }
+  .summary {
+    display: none;
+    h3 {
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+    p {
+      margin-bottom: 24px;
     }
   }
 }

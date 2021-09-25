@@ -53,6 +53,12 @@ body#request form textarea {
   line-height: 1.5;
   border: 1px solid #f2f2f2;
   border-radius: 6px;
+  transition: 0.2s ease-in-out;
+}
+
+body#request form textarea.error {
+  border: 1px solid #cc1634;
+  background: #fcf5f6;
 }
 
 body#request form textarea:focus {
@@ -84,6 +90,19 @@ body#request form .form-buttons button {
 body#request form .form-buttons button span {
   font-size: 14px;
   font-family: "Roboto Mono", monospace;
+}
+
+body#request .summary {
+  display: none;
+}
+
+body#request .summary h3 {
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+body#request .summary p {
+  margin-bottom: 16px;
 }
 
 @media only screen and (max-width: 1365px) {
