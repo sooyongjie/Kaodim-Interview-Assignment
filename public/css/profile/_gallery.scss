@@ -10,6 +10,10 @@
         width: 150px;
         object-fit: fill;
       }
+
+      &.last-img img {
+        filter: brightness(75%);
+      }
       #view-all {
         display: flex;
         flex-direction: column;
@@ -21,9 +25,11 @@
         z-index: 2;
         span {
           font-size: 16px;
+          font-weight: 500;
+          color: white;
         }
         .img-num {
-          font-size: 20px;
+          font-size: 28px;
         }
       }
     }

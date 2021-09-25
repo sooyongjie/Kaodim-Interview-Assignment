@@ -89,6 +89,11 @@ body#request form .form-buttons button span {
   font-family: "Roboto Mono", monospace;
 }
 
+body#request form .form-buttons button#next-btn.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 body#request .summary {
   display: none;
 }
@@ -404,6 +409,10 @@ body#request .summary p {
   object-fit: fill;
 }
 
+.gallery .image-container .image.last-img img {
+  filter: brightness(75%);
+}
+
 .gallery .image-container .image #view-all {
   display: flex;
   flex-direction: column;
@@ -417,10 +426,12 @@ body#request .summary p {
 
 .gallery .image-container .image #view-all span {
   font-size: 16px;
+  font-weight: 500;
+  color: white;
 }
 
 .gallery .image-container .image #view-all .img-num {
-  font-size: 20px;
+  font-size: 28px;
 }
 
 .review-section .ratings {
